@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirm Details</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Afacad:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+      :root {
+        --primary-color: #051207;
+        --background-gradient: linear-gradient(#71cb7d, #f4f4f4, #fdfdfd);
+        --container-bg: #daf9de;
+        --form-gradient: linear-gradient(rgba(11, 54, 19, 0.7), rgba(33, 156, 56, 0.7));
+        --text-color: white;
+        --font: 'Afacad', sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: var(--font);
+        background: var(--background-gradient);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 96px 20px;
+      }
+
+      h2 {
+        font-size: 32px;
+        color: var(--text-color);
+      }
+
+      p {
+        margin-bottom: 20px;
+      }
+
+      a {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      /* Container */
+      .login-container {
+        position: relative;
+        background: var(--container-bg);
+        padding: 64px 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+        max-width: 1120px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border: 1px solid #ffffff;
+      }
+
+      .login-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: url("img/login-background.jpg") center/cover no-repeat;
+        opacity: 0.2;
+        z-index: 0;
+      }
+
+      .login-form {
+        position: relative;
+        z-index: 1;
+        background: var(--form-gradient);
+        padding: 40px;
+        border-radius: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 480px;
+        color: var(--text-color);
+      }
+
+      .form {
+        width: 100%;
+      }
+
+      .form label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+
+      .form input[type="text"],
+      .form input[type="email"],
+      .form input[type="password"] {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        font-family: var(--font);
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+
+      .form-options {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        margin: 10px 0 20px;
+        font-size: 16px;
+      }
+
+      .form-options label {
+        margin-bottom: 0;
+      }
+
+      .form input[type="submit"] {
+        background: var(--primary-color);
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+        width: 100%;
+        padding: 16px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s ease;
+      }
+
+      .form input[type="submit"]:hover {
+        background-color: #0e2810;
+      }
+
+      .check {
+        width: 92px;
+        height: auto;
+        margin-bottom: 20px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-form">
+        <img src="img/icons/check.svg" class="check"/>
+        <h2>Welcome, Roden!</h2>
+        <p>You’re successfully sign in with Google.</p>
+        <form action="/login" method="POST" class="form">
+            <p style="font-weight: 600; font-size: 20px;">Confirm your details</p>
+          <label for="name">Name</label>
+          <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Roden Belgera"
+          required
+        />
+        <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="username@gmail.com"
+            required
+          />
+          <label for="phone">Phone</label>
+          <input
+            type="text"
+            id="phone"
+            name="phone"
+            placeholder="0123456789"
+            required
+          />
+
+          <label for="address">Address</label>
+          <input
+            type="text"
+            id="address"
+            name="address"
+            placeholder="17 Guyabano st. brgy. capri"
+            required
+          />
+
+          <div class="form-options">
+            <input type="checkbox" id="terms" name="terms" />
+
+            <label for="terms">
+              Agree to all the
+            </label>
+            <a href="#">Terms and Conditions</a>
+          </div>
+
+          <input type="submit" value="Confirm & Continue" />
+        </form>
+    </div>
+  </body>
+</html>

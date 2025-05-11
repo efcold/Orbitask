@@ -1,0 +1,153 @@
+:root {
+    --primary-color: #051207;
+    --container-bg: #daf9de;
+    --form-bg: rgba(11, 54, 19, 0.8);
+    --text-color: #fff;
+    --font-base: "Afacad", sans-serif;
+    --font-alt: "Poppins", sans-serif;
+    --overlay: rgba(11,54,19,0.7), rgba(33,156,56,0.7);
+    --bg-gradient: linear-gradient(#71cb7d, #f4f4f4, #fdfdfd);
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: var(--font-base);
+    background: var(--bg-gradient);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px 5px;
+  }
+  .container {
+    background: var(--container-bg);
+    padding: 24px 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    width: 100%;
+    position: relative;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../img/pics/container.png');
+    opacity: 0.1;
+    z-index: 0;
+    border-radius: 8px;
+  }
+  .form-box {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(var(--overlay));
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+    color: var(--text-color);
+  }
+  .logo {
+    width: 120px;
+    margin-bottom: 12px;
+  }
+  .back {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: black;
+  }
+  .back i {
+    margin-right: 4px;
+    font-size: 12px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  p {
+    font-family: var(--font-alt);
+    font-size: 12px;
+    margin-bottom: 14px;
+  }
+
+  label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+  input[type="email"],
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 6px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 14px;
+  }
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 12px;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  button[type="submit"]:hover {
+    background: #0e2810;
+  }
+
+  
+  .divider {
+    display: flex;
+    align-items: center;
+    margin: 14px 0;
+  }
+  .divider .line {
+    flex: 1;
+    height: 1px;
+    background: #fff;
+  }
+  .divider span {
+    margin: 0 6px;
+    font-size: 10px;
+  }
+
+  .google-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 6px;
+    font-family: var(--font-base);
+    font-size: 12px;
+    font-weight: bold;
+    background: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+  }
+  .google-button img {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+  }
+  .google-button:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
